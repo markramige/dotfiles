@@ -1,8 +1,8 @@
 # dotfiles
 ```
 cd ~
-r/o: git clone https://github.com/markdram/dotfiles
-dev: git clone git@github.com:markdram/dotfiles.git
+r/o: git clone https://github.com/markramige/dotfiles
+dev: git clone git@github.com:markramige/dotfiles.git
 ~/dotfiles/install
 ```
 
