@@ -1,0 +1,5 @@
+[user]
+	name = Mark Ramige
+	email = markdavidram@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global

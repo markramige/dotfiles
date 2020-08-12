@@ -1,0 +1,17 @@
+/*
+
+!.bash_aliases
+!.bash_logout
+!.bashrc
+!.gitconfig
+!.gitignore
+!.gitignore_global
+!.inputrc
+!.profile
+!.tmux.conf
+!install
+!LICENSE
+!README.md
+
+!/.vim/
+/.vim/pack
