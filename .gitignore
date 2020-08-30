@@ -6,6 +6,7 @@
 !.gitconfig
 !.gitignore
 !.gitignore_global
+!.hushlogin
 !.inputrc
 !.profile
 !.tmux.conf
