@@ -8,6 +8,7 @@
 !.gitignore_global
 !.hushlogin
 !.inputrc
+!.pam_environment
 !.profile
 !.tmux.conf
 !install
