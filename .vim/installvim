@@ -1,17 +1,36 @@
-#!/bin/sh
+#!/bin/bash
 
 sudo apt-get update
-sudo apt-get --no-install-recommends install vim-nox -y
+
+if [ -v DISPLAY ]; then
+  sudo apt-get --no-install-recommends install vim-gtk3 fonts-firacode -y
+  sudo update-alternatives --set editor /usr/bin/vim.gtk3
+  sudo update-alternatives --set ex /usr/bin/vim.gtk3
+  sudo update-alternatives --set rview /usr/bin/vim.gtk3
+  sudo update-alternatives --set rvim /usr/bin/vim.gtk3
+  sudo update-alternatives --set vi /usr/bin/vim.gtk3
+  sudo update-alternatives --set view /usr/bin/vim.gtk3
+  sudo update-alternatives --set vim /usr/bin/vim.gtk3
+  sudo update-alternatives --set vimdiff /usr/bin/vim.gtk3
+  sudo update-alternatives --set gvim /usr/bin/vim.gtk3
+  sudo update-alternatives --set gview /usr/bin/vim.gtk3
+  sudo update-alternatives --set rgview /usr/bin/vim.gtk3
+  sudo update-alternatives --set rgvim /usr/bin/vim.gtk3
+  sudo update-alternatives --set evim /usr/bin/vim.gtk3
+  sudo update-alternatives --set eview /usr/bin/vim.gtk3
+  sudo update-alternatives --set gvimdiff /usr/bin/vim.gtk3
+else
+  sudo apt-get --no-install-recommends install vim-nox -y
+  sudo update-alternatives --set editor /usr/bin/vim.nox
+  sudo update-alternatives --set ex /usr/bin/vim.nox
+  sudo update-alternatives --set rview /usr/bin/vim.nox
+  sudo update-alternatives --set rvim /usr/bin/vim.nox
+  sudo update-alternatives --set vi /usr/bin/vim.nox
+  sudo update-alternatives --set view /usr/bin/vim.nox
+  sudo update-alternatives --set vim /usr/bin/vim.nox
+  sudo update-alternatives --set vimdiff /usr/bin/vim.nox
+fi
 sudo apt-get install git -y
-#sudo apt-get --no-install-recommends install vim-nox fonts-firacode -y #gui
-sudo update-alternatives --set editor /usr/bin/vim.nox
-sudo update-alternatives --set ex /usr/bin/vim.nox
-sudo update-alternatives --set rview /usr/bin/vim.nox
-sudo update-alternatives --set rvim /usr/bin/vim.nox
-sudo update-alternatives --set vi /usr/bin/vim.nox
-sudo update-alternatives --set view /usr/bin/vim.nox
-sudo update-alternatives --set vim /usr/bin/vim.nox
-sudo update-alternatives --set vimdiff /usr/bin/vim.nox
 mkdir -p ~/.vim/pack/mdr/start
 cd ~/.vim/pack/mdr/start
 git clone https://github.com/tpope/vim-sensible
@@ -21,3 +40,4 @@ git clone https://github.com/sonph/onehalf
 mv onehalf/vim vim-onehalf
 rm -rf onehalf
 cd ~
+
