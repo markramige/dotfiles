@@ -8,5 +8,6 @@ rm -r dotfiles
 if [ -v GNOME_TERMINAL_SCREEN ]; then
   wget https://raw.githubusercontent.com/sonph/onehalf/master/gnome-terminal/onehalfdark.sh
   source onehalfdark.sh
+  sleep 1
   rm onehalfdark.sh
 fi
