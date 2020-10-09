@@ -6,5 +6,8 @@ rm -r dotfiles
 ~/.vim/installvim
 
 if [ -v GNOME_TERMINAL_SCREEN ]; then
-  wget https://raw.githubusercontent.com/sonph/onehalf/master/gnome-terminal/onehalfdark.sh && source onehalfdark.sh && rm onehalfdark.sh
+  wget https://raw.githubusercontent.com/sonph/onehalf/master/gnome-terminal/onehalfdark.sh
+  chmod +x onehalfdark.sh
+  ./onehalfdark.sh
+  rm onehalfdark.sh
 fi
