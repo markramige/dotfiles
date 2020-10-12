@@ -77,6 +77,17 @@ fi
 
 ## ssh-agent
 if [ -v WSLENV ] && [ $WSL_DISTRO_NAME == "Ubuntu" ]; then
+  if [ ! -d "$HOME/.ssh" ]; then
+    mkdir $HOME/.ssh
+    chmod 700 {$HOME,$HOME/.ssh}
+  fi
+  if [ ! -d "$HOME/winhome" ]; then
+    ln -s /mnt/c/Users/mdr $HOME/winhome
+  fi
+  if [ ! -e "/usr/bin/socat" ]; then
+    echo "installing socat"
+    sudo apt install socat -y
+  fi
   export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
   ss -a | grep -q $SSH_AUTH_SOCK
   if [ $? -ne 0 ]; then
