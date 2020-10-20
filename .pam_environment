@@ -1,2 +1,2 @@
 MOZ_X11_EGL=1
-JAVA_OPTIONS=-Dawt.useSystemAAFontSettings=lcd
+_JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd -Dswing.aatext=true"
