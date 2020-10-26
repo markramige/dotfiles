@@ -4,3 +4,8 @@ rm -rf .git .vim
 mv -f {dotfiles/*,dotfiles/.*} ~/
 rm -r dotfiles
 ~/.vim/installvim
+
+mkdir -p ~/.tmux/themes
+cd ~/.tmux/themes
+git clone https://github.com/arcticicestudio/nord-tmux
+cd $HOME
