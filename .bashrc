@@ -76,8 +76,7 @@ if ! shopt -oq posix; then
 fi
 
 ## ssh-agent
-##if [ -v WSLENV ] && [ $WSL_DISTRO_NAME == "Ubuntu" ]; then
-if [ -v WSLENV ]; then
+if [ -v WSLENV ] && [ $WSL_DISTRO_NAME == "Ubuntu-20.04" ]; then
   if [ ! -d "$HOME/.ssh" ]; then
     mkdir $HOME/.ssh
     chmod 700 {$HOME,$HOME/.ssh}
