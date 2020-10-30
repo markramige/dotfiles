@@ -3,9 +3,7 @@
 !.bash_aliases
 !.bash_logout
 !.bashrc
-!.gitconfig
 !.gitignore
-!.gitignore_global
 !.hushlogin
 !.inputrc
 !.pam_environment
@@ -15,5 +13,9 @@
 !LICENSE
 !README.md
 
+!/.config/
+/.config/*
+!/.config/bat/
+!/.config/git/
 !/.vim/
 /.vim/pack
