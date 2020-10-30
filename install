@@ -2,6 +2,9 @@
 
 rm -rf .git .tmux .vim .config/bat .config/git
 mv -f {dotfiles/*,dotfiles/.*} ~/
+mkdir -p ~/.config
+chmod 700 ~/.config
+mv dotfiles/.config/{bat,git} ~/.config/
 rm -r dotfiles
 ~/.vim/installvim
 
