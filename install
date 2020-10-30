@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf .git .vim
+rm -rf .git .tmux .vim .config/bat .config/git
 mv -f {dotfiles/*,dotfiles/.*} ~/
 rm -r dotfiles
 ~/.vim/installvim
