@@ -6,7 +6,9 @@ set t_Co=256
 let g:airline_theme='base16_nord'
 let g:airline_powerline_fonts=1
 
+set textwidth=79
 set colorcolumn=80
+highlight ColorColumn ctermbg=blue guibg=blue
 
 au BufNewFile,BufRead *.py
  \ set tabstop=4
