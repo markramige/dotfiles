@@ -75,6 +75,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+## gf
+complete -W "\$(gf -list)" gf
+
 ## ssh-agent
 if [ -v WSLENV ] && [ $WSL_DISTRO_NAME == "Ubuntu-20.04" ]; then
   if [ ! -d "$HOME/.ssh" ]; then

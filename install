@@ -1,16 +1,17 @@
 #!/bin/bash
 
-rm -rf .git .tmux .vim .config/bat .config/git
-mv -f {dotfiles/*,dotfiles/.*} ~/
-mkdir -p ~/.config
-mkdir -p ~/{bin,.local/bin,.local/share}
-chmod 700 ~/{.config,.local/share}
-chmod 755 ~/{bin,.local/bin}
-mv dotfiles/.config/{bat,git} ~/.config/
+cd $HOME
+rm -rf .gf .git .tmux .vim .config/bat .config/git
+mv -f {dotfiles/*,dotfiles/.*} $HOME/
+mkdir -p $HOME/.config
+mkdir -p $HOME/{bin,.local/bin,.local/share}
+chmod 700 $HOME/{.config,.local/share}
+chmod 755 $HOME/{bin,.local/bin}
+mv dotfiles/.config/{bat,git} $HOME/.config/
 rm -r dotfiles
-~/.vim/installvim
+$HOME/.vim/installvim
 
-mkdir -p ~/.tmux/themes
-cd ~/.tmux/themes
+mkdir -p $HOME/.tmux/themes
+cd $HOME/.tmux/themes
 git clone https://github.com/arcticicestudio/nord-tmux
 cd $HOME
