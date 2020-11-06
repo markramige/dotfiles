@@ -5,7 +5,9 @@ rm -rf .gf .git .tmux .vim .config/bat .config/git
 mv -f {dotfiles/*,dotfiles/.*} $HOME/
 mkdir -p $HOME/.config
 mkdir -p $HOME/{bin,.local/bin,.local/share}
-chmod 700 $HOME/{.config,.local/share}
+mkdir -p $HOME/.ssh
+chmod 700 $HOME
+chmod 700 $HOME/{.config,.local/share,.ssh}
 chmod 755 $HOME/{bin,.local/bin}
 mv dotfiles/.config/{bat,git} $HOME/.config/
 rm -r dotfiles
