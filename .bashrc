@@ -79,7 +79,7 @@ fi
 complete -W "\$(gf -list)" gf
 
 ## ssh-agent
-if [ -v WSLENV ] && [ $WSL_DISTRO_NAME == "Ubuntu" ]; then
+if [ -v WSLENV ] && [ $WSL_DISTRO_NAME == "Debian" ]; then
   if [ ! -d "$HOME/.ssh" ]; then
     mkdir $HOME/.ssh
     chmod 700 {$HOME,$HOME/.ssh}
