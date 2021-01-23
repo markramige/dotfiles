@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cd $HOME
 rm -rf .gf .git .tmux .vim .config/bat .config/git
