@@ -22,3 +22,6 @@ if [ -d "$HOME/scripts" ] ; then
   PATH="$HOME/scripts:$PATH"
 fi
 export PATH
+
+[[ -r "/etc/profile.d/bash_completion.sh" ]] && . "/etc/profile.d/bash_completion.sh"
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
